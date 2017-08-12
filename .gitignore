@@ -82,3 +82,28 @@ com_crashlytics_export_strings.xml
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+
+# java files #
+##############
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+target/
