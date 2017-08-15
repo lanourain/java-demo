@@ -2,6 +2,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 执行shell或调用脚本
+ */
 public class ExecCommand {
 
     public static void main(String args[]) throws IOException, InterruptedException {
