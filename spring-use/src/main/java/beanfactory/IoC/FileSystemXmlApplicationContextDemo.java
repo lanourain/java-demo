@@ -14,5 +14,6 @@ public class FileSystemXmlApplicationContextDemo {
         // 通过beanName获取容器中对应的Bean
         Object beanDemo = context.getBean("beanDemo");
         System.out.println(beanDemo instanceof BeanDemo);
+        System.out.println("beanDemo.getName = " + ((BeanDemo) beanDemo).getName());
     }
 }
