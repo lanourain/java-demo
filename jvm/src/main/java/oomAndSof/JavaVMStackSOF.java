@@ -1,3 +1,5 @@
+package oomAndSof;
+
 /**
  * 配置虚拟机栈大小
  * -Xss128k

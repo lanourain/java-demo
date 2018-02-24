@@ -1,3 +1,5 @@
+package oomAndSof;
+
 /**
  * -Xss2M
  * 创建线程导致OOM
