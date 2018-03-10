@@ -13,6 +13,9 @@ public class LockClassTest {
         Thread thread2 = new Thread(new SyncThreadLockClass(), "SyncThreadLockClass2");
         thread1.start();
         thread2.start();
-        Thread.sleep(1000);
+        thread1.join(); // 子线程合并到主线程，主线程等子线程执行完成后再执行。和sleep不同。
+        thread2.join();
+        System.out.println("main thread done");
+        //Thread.sleep(1000);
     }
 }
