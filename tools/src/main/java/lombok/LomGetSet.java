@@ -5,6 +5,8 @@ package lombok;
  * @NoArgsConstructor: 自动生成无参数构造函数。
  * @AllArgsConstructor: 自动生成全参数构造函数。
  * @Data: 自动为所有字段添加@ToString, @EqualsAndHashCode, @Getter方法，为非final字段添加@Setter,和@RequiredArgsConstructor!
+ * https://projectlombok.org/features/all
+ * idea 下载 lombok的插件，可不提示编译问题
  */
 public class LomGetSet {
     public static void main(String[] args) {
@@ -13,7 +15,7 @@ public class LomGetSet {
     }
 
     @AllArgsConstructor
-    static class GetterSetterExample {
+    public static class GetterSetterExample {
         @Getter
         @Setter
         private int age = 10;
