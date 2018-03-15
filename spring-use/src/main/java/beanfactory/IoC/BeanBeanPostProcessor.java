@@ -14,20 +14,21 @@ public class BeanBeanPostProcessor implements BeanPostProcessor {
 
     public BeanBeanPostProcessor() {
         super();
-        System.out.println("这是BeanPostProcessor实现类构造器！！先实例化bean再执行postProcess");
+        System.out.println("BeanPostProcessor - "
+                + "这是BeanPostProcessor实现类构造器！！先实例化bean再执行BeanPostProcessor的postProcess");
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String arg1)
             throws BeansException {
-        System.out.println("bean处理器：bean创建之后..");
+        System.out.println("BeanPostProcessor - bean处理器：bean初始化之后..");
         return bean;
     }
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String arg1)
             throws BeansException {
-        System.out.println("bean处理器：bean创建之前..");
+        System.out.println("BeanPostProcessor - bean处理器：bean初始化之前..");
 
         return bean;
     }

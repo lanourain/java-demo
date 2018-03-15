@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="IoC.factoryBean.Student">
+        <property name="name" value="zhangsan"/>
+    </bean>
+
+    <bean id="school" class="IoC.factoryBean.School">
+    </bean>
+
+    <bean id="factoryBeanPojo" class="IoC.factoryBean.FactoryBeanPojo">
+        <property name="type" value="student"/>
+    </bean>
+
+</beans>
