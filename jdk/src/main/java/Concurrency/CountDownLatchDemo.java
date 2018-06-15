@@ -4,7 +4,7 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * 使用CountDownLatch统筹线程之间的执行
- * 创建N个线程，创建完后一起执行，都执行完之后执行下一步操作
+ * 创建N个线程，创建完后一起执行，等都执行完之后执行下一步操作
  */
 public class CountDownLatchDemo {
 
