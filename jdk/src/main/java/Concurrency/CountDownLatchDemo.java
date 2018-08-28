@@ -20,6 +20,7 @@ public class CountDownLatchDemo {
             final int finalI = i;
             Thread t = new Thread(() -> {
                 try {
+                    // 等待计数器到0
                     startGate.await();
                     try {
                         Runnable task = () -> {
@@ -33,6 +34,7 @@ public class CountDownLatchDemo {
                         };
                         task.run();
                     } finally {
+                        // 计数器减一
                         endGate.countDown();
                     }
                 } catch (InterruptedException ignored) {
@@ -42,6 +44,7 @@ public class CountDownLatchDemo {
         }
 
         long start = System.nanoTime();
+        // 创建完所有线程之后才一起开始启动
         startGate.countDown();
         endGate.await();
         long end = System.nanoTime();
