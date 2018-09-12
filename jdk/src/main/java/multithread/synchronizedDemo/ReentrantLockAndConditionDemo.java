@@ -18,6 +18,7 @@ public class ReentrantLockAndConditionDemo {
                 reentrantLock.lock();
                 System.out.println("waitThread1 我要等一个新信号");
                 // 以原子方式暂时释放锁，并挂起当前线程，等待唤醒信号
+                // 等待到唤醒信号后，会重新去获取锁，如果未获取到锁，则会一直等待
                 condition.await();
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -36,9 +37,11 @@ public class ReentrantLockAndConditionDemo {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            // 发出唤醒信号，同时如果持有锁需要释放锁。
             condition.signalAll();
             System.out.println("signalThread 我发了一个信号！！");
             reentrantLock.unlock();
+            System.out.println("signalThread 我释放锁了！");
         }, "signalThread");
 
         thread2.start();
