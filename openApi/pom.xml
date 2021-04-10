@@ -9,26 +9,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jdk</artifactId>
+    <artifactId>openApi</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.18</version>
+            <groupId>me.ele.openapi</groupId>
+            <artifactId>eleme-openapi-sdk</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>Junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>me.ele.openapi</groupId>
+            <artifactId>eleme-java-ws-openapi</artifactId>
         </dependency>
     </dependencies>
-
-
-
 </project>

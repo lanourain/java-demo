@@ -31,10 +31,11 @@ public class TestThreadLocal {
         public void run() {
             System.out.println("线程" + index + "的初始value_1:" + value_1.get());
             System.out.println("线程" + index + "的初始value_2:" + value_2.get());
-            for (int i = 0; i < 10; i++) {
+            for (int i = 1; i <= 10; i++) {
                 value_1.set(value_1.get() + i);
                 value_2.set(value_2.get() * i);
             }
+            System.gc();
             System.out.println("线程" + index + "的累加value_1:" + value_1.get());
             System.out.println("线程" + index + "的累加value_2:" + value_2.get());
         }

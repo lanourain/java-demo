@@ -18,6 +18,8 @@
         <module>jdk</module>
         <module>jvm</module>
         <module>network</module>
+        <module>openApi</module>
+        <module>test</module>
     </modules>
 
     <properties>
@@ -151,6 +153,25 @@
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
                 <version>1.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.acegisecurity</groupId>
+                <artifactId>acegi-security</artifactId>
+                <version>1.0.5</version>
+            </dependency>
+
+            <!-- open api -->
+            <dependency>
+                <groupId>me.ele.openapi</groupId>
+                <artifactId>eleme-openapi-sdk</artifactId>
+                <version>1.21.35</version>
+            </dependency>
+
+            <dependency>
+                <groupId>me.ele.openapi</groupId>
+                <artifactId>eleme-java-ws-openapi</artifactId>
+                <version>1.0.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

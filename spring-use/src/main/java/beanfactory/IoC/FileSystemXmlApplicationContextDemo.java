@@ -11,6 +11,8 @@ public class FileSystemXmlApplicationContextDemo {
                 //"spring-core/src/main/resources/BeanDefinition.xml");
                 "classpath:BeanDefinition.xml");
 
+        context.publishEvent(new MyApplicationEvent("init-bean"));
+
         // 通过beanName获取容器中对应的Bean
         Object beanDemo = context.getBean("beanDemo");
         System.out.println(beanDemo instanceof BeanDemo);

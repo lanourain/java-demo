@@ -10,6 +10,7 @@ import java.io.InputStream;
 public class DiffClassLoaderTest {
 
     public static void main(String[] args) throws Exception {
+        // 重写loadClass的方法，自定义的去加载类，而不是调用父类去加载类，原生的是调用父类去加载类的。
         ClassLoader myLoader = new ClassLoader() {
             @Override
             public Class<?> loadClass(String name) throws ClassNotFoundException {
@@ -30,6 +31,7 @@ public class DiffClassLoaderTest {
         Object obj = myLoader.loadClass("classloader.DiffClassLoaderTest").newInstance();
 
         System.out.println(obj.getClass());
+        // 不重写java.lang.ClassLoader.loadClass(java.lang.String)方法的话，下面的等式是true。
         System.out.println(obj instanceof DiffClassLoaderTest);
     }
 }

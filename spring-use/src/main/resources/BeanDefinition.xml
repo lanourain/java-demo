@@ -12,4 +12,6 @@
     </bean>
     <bean id="beanBeanPostProcessor" class="beanfactory.IoC.BeanBeanPostProcessor"/>
     <bean id="beanFactoryPostProcessorDemo" class="beanfactory.IoC.BeanFactoryPostProcessorDemo"/>
+
+    <bean id="myApplicationListener" class="beanfactory.IoC.MyApplicationListener"/>
 </beans>
